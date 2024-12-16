@@ -1,0 +1,5 @@
+API Start,API Dur,Queue Start,Queue Dur,Kernel Start,Kernel Dur,Total Dur,PID,TID,DevId,API Function,GridXYZ,BlockXYZ,Kernel Name
+2.51298s,4.294 ms,-,-,2.51728s,5.952 μs,4.298 ms,236267,236267,0,cudaLaunchKernel,0197 1 1,0256 1 1,"void cask__5x_cudnn::computeOffsetsKernel<(bool)0, (bool)0>(cask__5x_cudnn::ComputeOffsetsParams)"
+2.51728s,18.231 ms,-,-,2.53551s,22.311 ms,40.540 ms,236267,236267,0,cudaLaunchKernel,50176 1 1,0128 1 1,_5x_cudnn_volta_scudnn_128x64_relu_medium_nn_v1
+2.53561s,24.390 ms,-,-,2.56s,28.400 ms,52.789 ms,236267,236267,0,cudaLaunchKernel,1605632    1    1,0128 1 1,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+2.56016s,15.282 μs,2.56018s,28.226 ms,2.58841s,2.208 μs,28.243 ms,236267,236267,0,cudaLaunchKernel,1 1 2001,0128 1 1,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOnSelf_add<long>, at::detail::Array<char *, (int)2>>(int, T2, T3)"

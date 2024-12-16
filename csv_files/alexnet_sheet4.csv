@@ -1,0 +1,23 @@
+Time,Total Time,Instances,Avg,Med,Min,Max,StdDev,Category,Operation
+34.60%,203.138 ms,24,8.464 ms,8.528 ms,5.390 ms,13.628 ms,2.171 ms,CUDA_KERNEL,volta_sgemm_32x128_nn
+12.60%,74.136 ms,32,2.317 ms,5.680 μs,351 ns,12.800 ms,3.601 ms,MEMORY_OPER,[CUDA memcpy Host-to-Device]
+11.70%,68.779 ms,8,8.597 ms,8.578 ms,6.037 ms,11.003 ms,1.703 ms,CUDA_KERNEL,_5x_cudnn_volta_scudnn_128x64_relu_xregs_large_nn_v1
+6.50%,38.269 ms,9,4.252 ms,4.165 ms,1.736 ms,5.698 ms,1.120 ms,CUDA_KERNEL,volta_sgemm_128x128_tn
+5.00%,29.434 ms,40,735.855 μs,498.898 μs,254.785 μs,1.718 ms,472.623 μs,CUDA_KERNEL,"void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)"
+4.70%,27.394 ms,56,489.185 μs,311.457 μs,20.960 μs,1.389 ms,463.345 μs,CUDA_KERNEL,"void at::native::vectorized_elementwise_kernel<(int)4, at::native::<unnamed>::launch_clamp_scalar(at::TensorIteratorBase &, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::[lambda() (instance 1)]::operator ()() const::[lambda() (instance 7)]::operator ()() const::[lambda(float) (instance 1)], at::detail::Array<char *, (int)2>>(int, T2, T3)"
+4.50%,26.164 ms,24,1.090 ms,1.148 ms,309.761 μs,2.051 ms,567.666 μs,CUDA_KERNEL,"void at::native::<unnamed>::max_pool_forward_nchw<float, float>(int, const T1 *, long, long, long, int, int, int, int, int, int, int, int, int, int, T1 *, long *)"
+3.80%,22.445 ms,7,3.206 ms,2.784 ms,2.684 ms,4.129 ms,589.635 μs,CUDA_KERNEL,volta_sgemm_64x32_sliced1x4_tn
+3.70%,21.908 ms,8,2.739 ms,2.731 ms,2.027 ms,3.514 ms,541.900 μs,CUDA_KERNEL,volta_sgemm_64x64_nn
+3.40%,19.880 ms,24,828.336 μs,782.066 μs,511.458 μs,1.169 ms,238.405 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardData4x4<float, float>(cudnn::winograd_nonfused::WinogradDataParams<T1, T2>)"
+3.10%,18.400 ms,24,766.683 μs,672.481 μs,576.578 μs,1.007 ms,160.736 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardOutput4x4<float, float>(cudnn::winograd_nonfused::WinogradOutputParams<T1, T2>)"
+2.80%,16.329 ms,8,2.041 ms,2.061 ms,1.656 ms,2.295 ms,183.218 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardOutput9x9_5x5<float, float>(cudnn::winograd_nonfused::WinogradOutputParams<T1, T2>)"
+1.80%,10.344 ms,8,1.293 ms,1.172 ms,941.091 μs,1.728 ms,267.797 μs,CUDA_KERNEL,"void at::native::<unnamed>::adaptive_average_pool<float>(const T1 *, T1 *, int, int, int, int, long, long, long)"
+1.10%,6.504 ms,8,813.050 μs,826.082 μs,592.770 μs,979.971 μs,119.865 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardData9x9_5x5<float, float>(cudnn::winograd_nonfused::WinogradDataParams<T1, T2>)"
+0.50%,2.844 ms,24,118.512 μs,111.312 μs,91.072 μs,157.153 μs,24.689 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardFilter4x4<float, float>(cudnn::winograd_nonfused::WinogradFilterParams<T1, T2>)"
+0.20%,887.587 μs,16,55.474 μs,49.904 μs,29.441 μs,78.560 μs,21.258 μs,CUDA_KERNEL,"void at::native::<unnamed>::fused_dropout_kernel_vec<float, float, unsigned int, (int)1, (int)4, bool>(at::cuda::detail::TensorInfo<const T1, T3>, at::cuda::detail::TensorInfo<T1, T3>, at::cuda::detail::TensorInfo<T6, T3>, T3, T2, at::PhiloxCudaState)"
+0.10%,600.834 μs,8,75.104 μs,74.832 μs,73.632 μs,77.664 μs,1.237 μs,CUDA_KERNEL,"void cudnn::winograd_nonfused::winogradForwardFilter9x9_5x5<float, float>(cudnn::winograd_nonfused::WinogradFilterParams<T1, T2>)"
+0.00%,291.233 μs,8,36.404 μs,33.440 μs,32.032 μs,44.992 μs,4.932 μs,CUDA_KERNEL,volta_sgemm_32x128_tn
+0.00%,53.472 μs,8,6.684 μs,6.416 μs,5.952 μs,7.904 μs,743 ns,CUDA_KERNEL,"void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::MaxOps<float>, unsigned int, float, (int)4>>(T3)"
+0.00%,35.616 μs,8,4.452 μs,4.192 μs,4.032 μs,5.311 μs,467 ns,CUDA_KERNEL,"void splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)1, (bool)1, (bool)0>(cublasSplitKParams<T6>, const T4 *, const T5 *, T5 *, const T6 *, const T6 *, const T7 *, const T4 *, T7 *, void *, long, T6 *, int *)"
+0.00%,16.127 μs,8,2.015 μs,1.967 μs,1.728 μs,2.560 μs,302 ns,CUDA_KERNEL,"void cask__5x_cudnn::computeOffsetsKernel<(bool)0, (bool)0>(cask__5x_cudnn::ComputeOffsetsParams)"
+0.00%,4.350 μs,10,435 ns,304 ns,287 ns,960 ns,249 ns,MEMORY_OPER,[CUDA memset]
